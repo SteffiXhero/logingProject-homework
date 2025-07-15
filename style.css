@@ -1,0 +1,260 @@
+
+
+:root {
+  --yellow: #048e12;
+  --light-yellow: #1ca83d;
+  --black: #130f40;
+  --light-color: #666;
+  --border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  outline: none; border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background: #f0f2f5;
+}
+
+.login-square {
+  width: 150px;
+  height: 150px;
+  background-color: #4CAF50; /* Green */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 10rem auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease all;
+}
+
+.login-square:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+
+/* Login/Signup Popup Form */
+.login-form-container {
+  position: fixed;
+  top: -105%;
+  left: 0;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: top 0.3s ease, opacity 0.3s ease;
+}
+.login-form-container.active {
+  top: 0;
+  opacity: 1;
+}
+
+.login-form-container form {
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 2rem;
+  box-shadow: var(--box-shadow);
+  background: #fff;
+  border: var(--border);
+  text-align: center;
+  width: 40rem;
+}
+
+.login-form-container form h3 {
+  color: var(--black);
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.login-form-container form .box {
+  margin: 0.7rem 0;
+  width: 100%;
+  text-transform: none;
+  color: var(--black);
+  font-size: 1.6rem;
+  padding: 1rem 1.2rem;
+  border: var(--border);
+  border-radius: 0.5rem;
+}
+
+.login-form-container form .btn {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: var(--yellow);
+  color: white;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.login-form-container form .btn:hover {
+  background-color: var(--light-yellow);
+  color: var(--black);
+}
+
+.login-form-container form p {
+  font-size: 1.5rem;
+  color: var(--light-color);
+}
+
+.login-form-container form p a {
+  color: var(--yellow);
+  text-decoration: underline;
+}
+
+#close-login-form {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
+  font-size: 5rem;
+  color: var(--black);
+  cursor: pointer;
+}
+
+
+.login-form-container form label {
+  display: block;
+  font-size: 1.4rem;
+  color: black;
+  margin: 1.7rem 0 0.5rem 0;
+  text-transform: capitalize;
+  font-weight: 500;
+  text-align: left;
+}
+
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper .toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 1.2rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.4rem;
+  color: var(--light-color);
+}
+
+.message-box {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  display: none; /* hidden by default */
+}
+
+.message-box.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  display: block;
+}
+
+.message-box.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  display:block;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+
+.business-form-container {
+  max-width: 600px;
+  margin: 5rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.business-form-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.4rem;
+}
+
+.business-form-container label {
+  display: block;
+  margin-top: 1.5rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.business-form-container input,
+.business-form-container select,
+.business-form-container textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.business-form-container input[type="file"] {
+  padding: 0.3rem;
+}
+
+.business-form-container .btn {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 1rem;
+  background-color: #0b9329;
+  border: none;
+  color: white;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.business-form-container .btn:hover {
+  background-color: #55b055;
+  color: #333;
+}
+
+.message-box {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: green;
+  font-weight: 600;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  
+  <div class="login-form-container active">
+    <form id="signupForm">
+      <div id="close-login-form" onclick="window.location.href='signin.html'">×</div>
+      <h3>sign up</h3>
+
+      <label for="signinEmail">UserName</label>
+      <input type="text"  class="box" id="signupUsername" required />
+
+      <label for="signinEmail">Email</label>
+      <input type="email"  class="box" id="signupEmail" required />
+
+      <label for="signinEmail">Password</label>
+      <input type="password"  class="box" id="signupPassword" required />
+
+      <!--<p id="formMessage" class="form-message hidden"></p>-->
+
+      <input type="submit" value="Create Account" class="btn" />
+      <p id="signupMessage" class="message-box hidden"></p>
+
+      <p>Already have an account? <a href="signin.html">Sign in</a></p>
+    </form>
+  </div>
+
+  <script src="javaScript.js"></script>
+</body>
+</html>

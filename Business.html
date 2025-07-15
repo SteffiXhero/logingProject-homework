@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Business Registration</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="business-form-container">
+    <h2>Business Registration</h2>
+    <form id="businessForm">
+      <label for="companyName">Company Name</label>
+      <input type="text" id="companyName" name="companyName" required />
+
+      <label for="companyType">Company Type</label>
+      <select id="companyType" name="companyType" required>
+        <option value="">Select Type</option>
+        <option value="LLC">LLC</option>
+        <option value="Corporation">Corporation</option>
+        <option value="Sole Proprietorship">Sole Proprietorship</option>
+        <option value="Partnership">Partnership</option>
+      </select>
+
+      <label for="sector">Sector</label>
+      <select id="sector" name="sector" required>
+        <option value="">Select Sector</option>
+        <option value="Technology">Technology</option>
+        <option value="Healthcare">Healthcare</option>
+        <option value="Finance">Finance</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="address">Address</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+
+      <label for="capital">Capital (USD)</label>
+      <input type="number" id="capital" name="capital" required min="0" />
+
+      <label for="document">Upload Business Document</label>
+      <input
+  type="file"
+  id="document"
+  name="document"
+  accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.bmp,.webp"
+  required
+                 />
+      
+
+      <input type="submit" value="Submit Registration" class="btn" />
+
+
+
+<p id="businessMessage" class="message-box hidden"></p>
+
+    </form>
+  </div>
+
+  <script src="javaScript.js"></script>
+</body>
+</html>

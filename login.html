@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Log In</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="login-square" onclick="openLogin()">Login</div>
+
+  <!-- Login form popup -->
+  <div class="login-form-container">
+    <form id="signinForm">
+      <div id="close-login-form" onclick="closeLogin()">×</div>
+      <h3>sign in</h3>
+
+      <label for="signinEmail">Email</label>
+      <input type="email" class="box" id="signinEmail" required />
+
+      <label for="signinPassword">Password</label>
+      <div class="password-wrapper">
+        <input type="password" class="box" id="signinPassword" required />
+        <span class="toggle-password" onclick="togglePassword()">*</span>
+      </div>
+
+      <!--<div id="formMessage" class="form-message hidden"></div>-->
+
+      <p id="signinMessage" class="message-box hidden"></p>
+
+      <input type="submit" value="Login" class="btn" />
+
+      <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+    </form>
+  </div>
+  <script src="javaScript.js"></script>
+</body>
+</html>
