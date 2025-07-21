@@ -3,10 +3,6 @@ on:
   push:
     branches:
       - main
- 
-  branches:
-    - main
-
     
   hellp_job:
     
