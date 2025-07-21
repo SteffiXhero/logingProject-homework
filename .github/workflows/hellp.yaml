@@ -6,12 +6,12 @@ on:
       - main
 
 jobs:
-  hellp-job:
+  hello-job:
     runs-on: ubuntu-latest
 
     steps:
       - name: Print hello world
         run: echo "hello world"
 
-      - name: Use secret password (barwar_bany)
-        run: echo "The password is ${{ secrets.barwar2004 }}"
+      - name: Use secret password
+        run: echo "The password is ${{ secrets.BARWAR_PASSWORD }}"
