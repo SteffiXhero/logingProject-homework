@@ -5,7 +5,7 @@ on:
       - main
     
 jobs:
-  hellp_job:
+  hello-job:
     
     runs-on: ubuntu-latest
 
