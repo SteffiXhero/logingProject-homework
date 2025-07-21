@@ -15,3 +15,9 @@ jobs:
 
       - name: Use secret password
         run: echo "The password is ${{ secrets.BARWAR_BANY}}"
+
+      - name: Use variable
+        run: echo "Variable says: ${{ vars.BARWAR_BANY }}"
+
+      - name: Use local env var
+        run: echo "Local var says: $LOCAL_VAR"
