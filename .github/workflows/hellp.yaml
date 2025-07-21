@@ -14,4 +14,4 @@ jobs:
         run: echo "hello world"
 
       - name: Use secret password
-        run: echo "The password is ${{ secrets.2004 }}"
+        run: echo "The password is ${{ secrets.BARWAR_BANY}}""
