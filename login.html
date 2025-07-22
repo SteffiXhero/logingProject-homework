@@ -34,6 +34,16 @@
       <p>Don't have an account? <a href="signup.html">Sign up</a></p>
     </form>
   </div>
+
+<script>
+  document.getElementById('signinForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    window.location.href = 'business.html';
+  });
+</script>
+
+
+
   <script src="javaScript.js"></script>
 </body>
 </html>
