@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         signinMessage.textContent = "";
         closeLogin(); // if you want it to disappear
 
-        window.location.href = "business.html";
+        window.location.href = "Business.html";
 
       }, 2000);
     });
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       setTimeout(() => {
         window.location.href = "signin.html";
-        window.location.href = "business.html";
+        window.location.href = "Business.html";
 
       }, 2000);
     });
