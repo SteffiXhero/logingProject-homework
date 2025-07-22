@@ -8,16 +8,14 @@ on:
 jobs:
   hello-job:
     runs-on: ubuntu-latest
+    env:
+      LOCAL_VAR: "Local value"
 
     steps:
       - name: Print hello world
         run: echo "hello world"
 
       - name: Use secret password
-        run: echo "The password is ${{ secrets.BARWAR_BANY}}"
+        run: echo "The password is ${{ secrets.BARWAR_BANY }}"
 
-      - name: Use variable
-        run: echo "Variable says: ${{ vars.BARWAR_BANY }}"
-
-      - name: Use local env var
-        run: echo "Local var says: $LOCAL_VAR"
+  
